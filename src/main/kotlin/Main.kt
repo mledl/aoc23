@@ -6,4 +6,5 @@ fun main() {
     val day01 = Day01(inputFactory.getInputDay1())
 
     println("Day01 P1: ${day01.getPart1()}")
+    println("Day01 P2: ${day01.getPart2()}")
 }
