@@ -13,14 +13,14 @@ class Day02(private val input: List<String>) {
     private fun checkDraw(draw: String): Boolean = draw.split(",").all { checkCube(it) }
 
     private fun checkCube(cube: String): Boolean = cube.trim().split(" ").let {
-        it.isNotEmpty() && it.get(0).toInt() <= checkMap.get(it.get(1))!!
+        it.isNotEmpty() && it[0].toInt() <= checkMap[it[1]]!!
     }
 
     // Part 2 helper
     private fun calcPowers(games: List<String>) = games.sumOf {
-        game -> listOf("red", "green", "blue").map {
-            "\\d+ $it".toRegex().findAll(game).map {
-                it.value.trim().split(" ").first.toInt()
+        game -> listOf("red", "green", "blue").map { s ->
+        "\\d+ $s".toRegex().findAll(game).map {
+                it.value.trim().split(" ").first().toInt()
             }.max()
         }.reduce { acc, elem -> acc * elem }
     }
