@@ -15,6 +15,6 @@ fun main() {
     println("Day02 P2: ${day02.getPart2()}")*/
 
     val day03 = Day03(inputFactory.getInputDay03())
-    println("Day03 P1: ${day03.getPart1()}")
-    // println("Day03 P2: ${day03.getPart2()}")
+    // println("Day03 P1: ${day03.getPart1()}")
+    println("Day03 P2: ${day03.getPart2()}")
 }
